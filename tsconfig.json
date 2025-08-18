@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",       // Uppdatera till ES2015 eller nyare
+    "lib": ["ES2015", "DOM"], // Inkludera ES2015 och DOM för att stödja moderna funktioner
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src/ts",
+    "strict": true
+  },
+  "include": ["src/ts"]
+}
