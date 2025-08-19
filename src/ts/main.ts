@@ -37,12 +37,12 @@ class TodoList {
       return true;
     }
   
-    // Markera en todo som klar
-    markTodoCompleted(todoIndex: number): void {
-      if (todoIndex >= 0 && todoIndex < this.todos.length) {
-        this.todos[todoIndex].completed = true;
-        this.saveToLocalStorage();
-      }
+    // Ta bort todo helt när klar
+    removeTodo(todoIndex: number): void {
+        if (todoIndex >= 0 && todoIndex < this.todos.length) {
+            this.todos.splice(todoIndex, 1);
+            this.saveToLocalStorage();
+        }
     }
   
     // Hämta alla todos
@@ -99,7 +99,7 @@ function renderTodos() {
     completeBtn.className = "complete-btn";
     completeBtn.disabled = todo.completed;
     completeBtn.addEventListener("click", () => {
-      todoList.markTodoCompleted(index);
+      todoList.removeTodo(index); // Ta bort istället för att markera
       renderTodos(); // Uppdatera listan
     });
 

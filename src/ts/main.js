@@ -22,10 +22,10 @@ var TodoList = /** @class */ (function () {
         this.saveToLocalStorage(); // Spara uppdaterad lista till localStorage
         return true;
     };
-    // Markera en todo som klar
-    TodoList.prototype.markTodoCompleted = function (todoIndex) {
+    // Ta bort todo helt när klar
+    TodoList.prototype.removeTodo = function (todoIndex) {
         if (todoIndex >= 0 && todoIndex < this.todos.length) {
-            this.todos[todoIndex].completed = true;
+            this.todos.splice(todoIndex, 1);
             this.saveToLocalStorage();
         }
     };
@@ -77,7 +77,7 @@ function renderTodos() {
         completeBtn.className = "complete-btn";
         completeBtn.disabled = todo.completed;
         completeBtn.addEventListener("click", function () {
-            todoList.markTodoCompleted(index);
+            todoList.removeTodo(index); // Ta bort istället för att markera
             renderTodos(); // Uppdatera listan
         });
         li.appendChild(prioritySpan);
