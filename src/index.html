@@ -13,17 +13,21 @@
     <div class="wrapper">
     <main class="main">
         <!-- Formulär för nya todos -->
+    <h2 class="addHeader">Lägg till ny uppgift:</h2>
     <form class="todoForm">
         <input class="taskInput" type="text" placeholder="Skriv din uppgift..." required>
         <select class="selectPriority">
-          <option value="1">Prioritet 1 (Hög)</option>
-          <option value="2" selected>Prioritet 2 (Medel)</option>
+          <option value="1" selected>Prioritet 1 (Hög)</option>
+          <option value="2">Prioritet 2 (Medel)</option>
           <option value="3">Prioritet 3 (Låg)</option>
         </select>
         <button type="submit">Lägg till uppgift</button>
       </form>
       <!-- Lista över todos -->
+    <div class="list">
+       <h2 class="listHeader">Att göra:</h2>
       <ul id="todoList"></ul>
+    </div>
     </main>
     </div>
     <footer class="footer">
