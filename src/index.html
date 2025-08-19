@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Min att göra-lista</h1>
+    </header>
+    <div class="wrapper">
+    <main class="main">
+        <!-- Formulär för nya todos -->
+    <form class="todoForm">
+        <input class="taskInput" type="text" placeholder="Skriv din uppgift..." required>
+        <select class="selectPriority">
+          <option value="1">Prioritet 1 (Hög)</option>
+          <option value="2" selected>Prioritet 2 (Medel)</option>
+          <option value="3">Prioritet 3 (Låg)</option>
+        </select>
+        <button type="submit">Lägg till uppgift</button>
+      </form>
+      <!-- Lista över todos -->
+      <ul id="todoList"></ul>
+    </main>
+    </div>
+    <footer class="footer">
+        <p>DT208G | anju2402, Ängla Juliusson | VT25</p>
+    </footer>
+</body>
+</html>
