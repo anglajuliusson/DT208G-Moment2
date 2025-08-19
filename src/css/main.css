@@ -22,12 +22,31 @@ body {
 form {
     margin-bottom: 2em;
 }
+input {
+    border-radius: 5px;  
+    border: none;         
+}
+.addbutton {
+    background-color: greenyellow;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: none;   
+}
 .list {
     background-color: rgb(255, 234, 194);
     padding: 1em;
     max-width: 600px;
     width: 100%;
     margin: auto;
+}
+ul {
+    text-align: left;
+}
+#todoList li {
+    display: flex;
+    align-items: center;       
+    justify-content: center;   
+    gap: 50px;
 }
 }
 @media (max-width: 1024px) {
@@ -51,7 +70,7 @@ form {
         border-radius: 5px;  
         border: none;         
     }
-    button {
+    .addbutton {
         background-color: greenyellow;
         padding: 0.5em;
         border-radius: 10px;
@@ -63,6 +82,15 @@ form {
         max-width: 600px;
         width: 100%;
         margin: auto;
+    }
+    ul {
+        text-align: left;
+    }
+    #todoList li {
+        display: flex;
+        align-items: center;       
+        justify-content: center;   
+        gap: 50px;
     }
 }
 @media (max-width: 600px) {
@@ -88,5 +116,14 @@ form {
         max-width: 400px;
         width: 100%;
         margin: auto;
+    }
+    ul {
+        text-align: left;
+    }
+    #todoList li {
+        display: flex;
+        align-items: center;       
+        justify-content: center;   
+        gap: 50px;
     }
 }
